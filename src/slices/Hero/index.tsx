@@ -22,7 +22,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
   return (
     <>
-    <section className="relative bg-slate-900 text-white">
+    {/* <section className="relative bg-slate-900 text-white">
       {isFilled.image(backgroundImage) && (
         <PrismicNextImage
           field={backgroundImage}
@@ -49,7 +49,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           )}
         </div>
       </Bounded>
-    </section>
+    </section> */}
 
     <section className="bg-hero min-h-screen flex items-center justify-center text-center pt-24 pr-8 pb-16 relative overflow-hidden before:bg-grad before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0" id="home">
     <div className="relative z-10 max-w-[800px]">
