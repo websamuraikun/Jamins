@@ -127,6 +127,9 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | TestimonialSlice
+  | ProcessSlice
+  | WhysectionSlice
   | ServicectaSlice
   | HeroSlice
   | QuoteSlice
@@ -508,6 +511,118 @@ export type ImageCardsSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *Process → Default → Primary → item step*
+ */
+export interface ProcessSliceDefaultPrimaryItemStepItem {
+  /**
+   * step number field in *Process → Default → Primary → item step*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: process.default.primary.item_step[].step_number
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  step_number: prismic.KeyTextField;
+
+  /**
+   * title field in *Process → Default → Primary → item step*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: process.default.primary.item_step[].title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * description field in *Process → Default → Primary → item step*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: process.default.primary.item_step[].description
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  description: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Process → Default → Primary*
+ */
+export interface ProcessSliceDefaultPrimary {
+  /**
+   * smallHeader field in *Process → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: process.default.primary.smallheader
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  smallheader: prismic.KeyTextField;
+
+  /**
+   * main title field in *Process → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: process.default.primary.main_title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  main_title: prismic.KeyTextField;
+
+  /**
+   * sub title field in *Process → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: process.default.primary.sub_title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  sub_title: prismic.KeyTextField;
+
+  /**
+   * item step field in *Process → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: process.default.primary.item_step[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  item_step: prismic.GroupField<
+    Simplify<ProcessSliceDefaultPrimaryItemStepItem>
+  >;
+}
+
+/**
+ * Default variation for Process Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ProcessSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ProcessSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Process*
+ */
+type ProcessSliceVariation = ProcessSliceDefault;
+
+/**
+ * Process Shared Slice
+ *
+ * - **API ID**: `process`
+ * - **Description**: Process
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ProcessSlice = prismic.SharedSlice<
+  "process",
+  ProcessSliceVariation
+>;
+
+/**
  * Primary content in *Quote → Default → Primary*
  */
 export interface QuoteSliceDefaultPrimary {
@@ -657,6 +772,98 @@ type ServicectaSliceVariation = ServicectaSliceDefault;
 export type ServicectaSlice = prismic.SharedSlice<
   "servicecta",
   ServicectaSliceVariation
+>;
+
+/**
+ * Item in *Testimonial → Default → Primary → testimonials*
+ */
+export interface TestimonialSliceDefaultPrimaryDescriptionItem {
+  /**
+   * testimonials tests field in *Testimonial → Default → Primary → testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.default.primary.description[].testimonials_tests
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  testimonials_tests: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Testimonial → Default → Primary*
+ */
+export interface TestimonialSliceDefaultPrimary {
+  /**
+   * subheader field in *Testimonial → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.default.primary.subheader
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  subheader: prismic.KeyTextField;
+
+  /**
+   * Title field in *Testimonial → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * subheader field in *Testimonial → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.default.primary.aeder
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  aeder: prismic.KeyTextField;
+
+  /**
+   * testimonials field in *Testimonial → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.default.primary.description[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  description: prismic.GroupField<
+    Simplify<TestimonialSliceDefaultPrimaryDescriptionItem>
+  >;
+}
+
+/**
+ * Default variation for Testimonial Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TestimonialSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TestimonialSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Testimonial*
+ */
+type TestimonialSliceVariation = TestimonialSliceDefault;
+
+/**
+ * Testimonial Shared Slice
+ *
+ * - **API ID**: `testimonial`
+ * - **Description**: Testimonial
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TestimonialSlice = prismic.SharedSlice<
+  "testimonial",
+  TestimonialSliceVariation
 >;
 
 /**
@@ -850,6 +1057,106 @@ export type TextWithImageSlice = prismic.SharedSlice<
   TextWithImageSliceVariation
 >;
 
+/**
+ * Item in *Whysection → Default → Primary → iItem*
+ */
+export interface WhysectionSliceDefaultPrimaryIitemItem {
+  /**
+   * service title field in *Whysection → Default → Primary → iItem*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: whysection.default.primary.iitem[].service_title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  service_title: prismic.KeyTextField;
+
+  /**
+   * item description field in *Whysection → Default → Primary → iItem*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: whysection.default.primary.iitem[].item_description
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  item_description: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Whysection → Default → Primary*
+ */
+export interface WhysectionSliceDefaultPrimary {
+  /**
+   * Ttile Header field in *Whysection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: whysection.default.primary.ttile_header
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  ttile_header: prismic.KeyTextField;
+
+  /**
+   * Title field in *Whysection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: whysection.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Subtitle field in *Whysection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: whysection.default.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * iItem field in *Whysection → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: whysection.default.primary.iitem[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  iitem: prismic.GroupField<Simplify<WhysectionSliceDefaultPrimaryIitemItem>>;
+}
+
+/**
+ * Default variation for Whysection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type WhysectionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<WhysectionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Whysection*
+ */
+type WhysectionSliceVariation = WhysectionSliceDefault;
+
+/**
+ * Whysection Shared Slice
+ *
+ * - **API ID**: `whysection`
+ * - **Description**: Whysection
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type WhysectionSlice = prismic.SharedSlice<
+  "whysection",
+  WhysectionSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -895,6 +1202,11 @@ declare module "@prismicio/client" {
       ImageCardsSliceDefaultPrimary,
       ImageCardsSliceVariation,
       ImageCardsSliceDefault,
+      ProcessSlice,
+      ProcessSliceDefaultPrimaryItemStepItem,
+      ProcessSliceDefaultPrimary,
+      ProcessSliceVariation,
+      ProcessSliceDefault,
       QuoteSlice,
       QuoteSliceDefaultPrimary,
       QuoteSliceVariation,
@@ -904,6 +1216,11 @@ declare module "@prismicio/client" {
       ServicectaSliceDefaultPrimary,
       ServicectaSliceVariation,
       ServicectaSliceDefault,
+      TestimonialSlice,
+      TestimonialSliceDefaultPrimaryDescriptionItem,
+      TestimonialSliceDefaultPrimary,
+      TestimonialSliceVariation,
+      TestimonialSliceDefault,
       TextSlice,
       TextSliceDefaultPrimary,
       TextSliceTwoColumnsPrimary,
@@ -916,6 +1233,11 @@ declare module "@prismicio/client" {
       TextWithImageSliceVariation,
       TextWithImageSliceDefault,
       TextWithImageSliceWithButton,
+      WhysectionSlice,
+      WhysectionSliceDefaultPrimaryIitemItem,
+      WhysectionSliceDefaultPrimary,
+      WhysectionSliceVariation,
+      WhysectionSliceDefault,
     };
   }
 }

@@ -1,0 +1,70 @@
+{
+  "id": "process",
+  "type": "SharedSlice",
+  "name": "Process",
+  "description": "Process",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "smallheader": {
+          "type": "Text",
+          "config": {
+            "label": "smallHeader",
+            "placeholder": ""
+          }
+        },
+        "main_title": {
+          "type": "Text",
+          "config": {
+            "label": "main title",
+            "placeholder": ""
+          }
+        },
+        "sub_title": {
+          "type": "Text",
+          "config": {
+            "label": "sub title",
+            "placeholder": ""
+          }
+        },
+        "item_step": {
+          "type": "Group",
+          "config": {
+            "label": "item step",
+            "repeat": true,
+            "fields": {
+              "step_number": {
+                "type": "Text",
+                "config": {
+                  "label": "step number",
+                  "placeholder": ""
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "title",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import { Inter } from "next/font/google";
+import { Inter, DM_Serif_Display, DM_Sans } from "next/font/google";
 import { asText } from "@prismicio/client";
 import { PrismicText } from "@prismicio/react";
 import { PrismicNextLink, PrismicPreview } from "@prismicio/next";
@@ -14,11 +14,24 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const dmSerifDisplay = DM_Serif_Display({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "400",
+  variable: "--font-display",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-body",
+});
+
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${dmSerifDisplay.variable} ${dmSans.variable}`}>
       <body className="overflow-x-hidden antialiased">
         <Header />
         {children}

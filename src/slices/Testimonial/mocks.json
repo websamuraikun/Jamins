@@ -1,0 +1,42 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"subheader": {
+				"__TYPE__": "FieldContent",
+				"value": "court",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "mice",
+				"type": "Text"
+			},
+			"aeder": {
+				"__TYPE__": "FieldContent",
+				"value": "on",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"testimonials_tests",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "picture",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

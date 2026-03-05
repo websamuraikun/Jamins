@@ -6,8 +6,11 @@ export const components = {
   hero: dynamic(() => import("./Hero")),
   image: dynamic(() => import("./Image")),
   image_cards: dynamic(() => import("./ImageCards")),
+  process: dynamic(() => import("./Process")),
   quote: dynamic(() => import("./Quote")),
   servicecta: dynamic(() => import("./Servicecta")),
+  testimonial: dynamic(() => import("./Testimonial")),
   text: dynamic(() => import("./Text")),
   text_with_image: dynamic(() => import("./TextWithImage")),
+  whysection: dynamic(() => import("./Whysection")),
 };

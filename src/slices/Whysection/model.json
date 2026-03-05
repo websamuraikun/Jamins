@@ -1,0 +1,63 @@
+{
+  "id": "whysection",
+  "type": "SharedSlice",
+  "name": "Whysection",
+  "description": "Whysection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "ttile_header": {
+          "type": "Text",
+          "config": {
+            "label": "Ttile Header",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        },
+        "iitem": {
+          "type": "Group",
+          "config": {
+            "label": "iItem",
+            "repeat": true,
+            "fields": {
+              "service_title": {
+                "type": "Text",
+                "config": {
+                  "label": "service title",
+                  "placeholder": ""
+                }
+              },
+              "item_description": {
+                "type": "Text",
+                "config": {
+                  "label": "item description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

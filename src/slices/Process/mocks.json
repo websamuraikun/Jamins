@@ -1,0 +1,58 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"smallheader": {
+				"__TYPE__": "FieldContent",
+				"value": "fair",
+				"type": "Text"
+			},
+			"main_title": {
+				"__TYPE__": "FieldContent",
+				"value": "enemy",
+				"type": "Text"
+			},
+			"sub_title": {
+				"__TYPE__": "FieldContent",
+				"value": "sat",
+				"type": "Text"
+			},
+			"item_step": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"step_number",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "against",
+									"type": "Text"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "proud",
+									"type": "Text"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "animal",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

@@ -1,0 +1,50 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"ttile_header": {
+				"__TYPE__": "FieldContent",
+				"value": "speed",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "needs",
+				"type": "Text"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "clay",
+				"type": "Text"
+			},
+			"iitem": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"service_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "cotton",
+									"type": "Text"
+								}
+							],
+							[
+								"item_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "scene",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

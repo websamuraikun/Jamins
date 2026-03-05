@@ -35,6 +35,15 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "testimonial": {
+              "type": "SharedSlice"
+            },
+            "process": {
+              "type": "SharedSlice"
+            },
+            "whysection": {
+              "type": "SharedSlice"
+            },
             "servicecta": {
               "type": "SharedSlice"
             },
