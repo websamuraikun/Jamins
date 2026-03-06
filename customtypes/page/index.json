@@ -35,6 +35,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "contact": {
+              "type": "SharedSlice"
+            },
+            "areaswecover": {
+              "type": "SharedSlice"
+            },
             "testimonial": {
               "type": "SharedSlice"
             },

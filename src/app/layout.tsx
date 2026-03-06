@@ -45,6 +45,7 @@ async function Header() {
   const client = createClient();
   const settings = await client.getSingle("settings");
   const navigation = await client.getSingle("navigation");
+  const footer = await client.getSingle("footer");
 
   return (
     <Bounded as="header" yPadding="sm">
@@ -70,6 +71,7 @@ async function Header() {
           </ul>
         </nav>
       </div>
+      <footer></footer>
     </Bounded>
   );
 }
