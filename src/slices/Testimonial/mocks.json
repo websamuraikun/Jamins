@@ -28,7 +28,7 @@
 								"testimonials_tests",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "picture",
+									"value": "same",
 									"type": "Text"
 								}
 							]

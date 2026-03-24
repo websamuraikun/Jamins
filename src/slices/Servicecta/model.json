@@ -26,6 +26,13 @@
             "placeholder": ""
           }
         },
+        "subheader": {
+          "type": "Text",
+          "config": {
+            "label": "subheader",
+            "placeholder": ""
+          }
+        },
         "cta": {
           "type": "Group",
           "config": {

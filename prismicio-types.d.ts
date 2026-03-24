@@ -483,7 +483,17 @@ export type ContactSlice = prismic.SharedSlice<
  */
 export interface HeroSliceDefaultPrimary {
   /**
-   * Text field in *Hero → Default → Primary*
+   * Header field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.header
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  header: prismic.KeyTextField;
+
+  /**
+   * title field in *Hero → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -491,6 +501,26 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
   text: prismic.RichTextField;
+
+  /**
+   * Description field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Button Text field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.buttonText
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  buttonText: prismic.KeyTextField;
 
   /**
    * Button Link field in *Hero → Default → Primary*
@@ -507,16 +537,6 @@ export interface HeroSliceDefaultPrimary {
     prismic.FieldState,
     never
   >;
-
-  /**
-   * Button Text field in *Hero → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.buttonText
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  buttonText: prismic.KeyTextField;
 
   /**
    * Background Image field in *Hero → Default → Primary*
@@ -956,6 +976,16 @@ export interface ServicectaSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
+   * subheader field in *Servicecta → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servicecta.default.primary.subheader
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  subheader: prismic.KeyTextField;
+
+  /**
    * CTA field in *Servicecta → Default → Primary*
    *
    * - **Field Type**: Group
@@ -1001,7 +1031,7 @@ export type ServicectaSlice = prismic.SharedSlice<
  */
 export interface TestimonialSliceDefaultPrimaryDescriptionItem {
   /**
-   * testimonials tests field in *Testimonial → Default → Primary → testimonials*
+   * testimonials  field in *Testimonial → Default → Primary → testimonials*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1309,7 +1339,7 @@ export interface WhysectionSliceDefaultPrimaryIitemItem {
  */
 export interface WhysectionSliceDefaultPrimary {
   /**
-   * Ttile Header field in *Whysection → Default → Primary*
+   * Title Header field in *Whysection → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*

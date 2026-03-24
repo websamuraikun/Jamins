@@ -15,7 +15,7 @@
         "ttile_header": {
           "type": "Text",
           "config": {
-            "label": "Ttile Header",
+            "label": "Title Header",
             "placeholder": ""
           }
         },

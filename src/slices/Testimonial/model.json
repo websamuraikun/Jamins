@@ -42,7 +42,7 @@
               "testimonials_tests": {
                 "type": "Text",
                 "config": {
-                  "label": "testimonials tests",
+                  "label": "testimonials ",
                   "placeholder": ""
                 }
               }

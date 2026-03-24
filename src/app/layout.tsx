@@ -31,10 +31,14 @@ export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSerifDisplay.variable} ${dmSans.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${dmSerifDisplay.variable} ${dmSans.variable}`}
+    >
       <body className="overflow-x-hidden antialiased">
         <Header />
         {children}
+        <Footer />
         <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
@@ -45,7 +49,6 @@ async function Header() {
   const client = createClient();
   const settings = await client.getSingle("settings");
   const navigation = await client.getSingle("navigation");
-  const footer = await client.getSingle("footer");
 
   return (
     <Bounded as="header" yPadding="sm">
@@ -71,7 +74,52 @@ async function Header() {
           </ul>
         </nav>
       </div>
-      <footer></footer>
     </Bounded>
+  );
+}
+
+async function Footer() {
+  const client = createClient();
+  const footer = await client.getSingle("footer");
+
+  return (
+    <footer className="bg-(--clr-deep) text-[rgba(255,255,255,0.5)] text-center py-10 px-8">
+        {footer.data.text && (
+          <p className="text-(--clr-gold) decoration-none">{footer.data.text}</p>
+        )}
+        <div className="flex flex-wrap gap-6">
+          {footer.data.email && (
+            <a
+              href={`mailto:${footer.data.email}`}
+              className="text-(--clr-gold) decoration-none hover:text-slate-900"
+            >
+              {footer.data.email}
+            </a>
+          )}
+          {footer.data.phone_number && (
+            <a
+              href={`tel:${footer.data.phone_number}`}
+              className="text-(--clr-gold) decoration-none hover:text-slate-900"
+            >
+              {footer.data.phone_number}
+            </a>
+          )}
+        </div>
+        <p>
+          &copy; {new Date().getFullYear()} Jamin&apos;s Carpet & Upholstery
+          Cleaning. Leeds & West Yorkshire.
+          <br />
+          {footer.data.phone_number && (
+            <a
+              href={`tel:${footer.data.phone_number}`}
+              className="text-(--clr-gold) decoration-none hover:text-slate-900"
+            >
+              {footer.data.phone_number}
+            </a>
+          )}{" "}
+          &nbsp;·&nbsp;{" "}
+          <a href="mailto:hello@jamins.co.uk">hello@jamins.co.uk</a>
+        </p>
+    </footer>
   );
 }

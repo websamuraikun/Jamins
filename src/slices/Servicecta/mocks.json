@@ -70,6 +70,11 @@
 						]
 					}
 				]
+			},
+			"subheader": {
+				"__TYPE__": "FieldContent",
+				"value": "swim",
+				"type": "Text"
 			}
 		},
 		"items": []

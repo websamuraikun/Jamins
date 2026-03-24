@@ -11,13 +11,36 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Hero",
       "primary": {
+        "header": {
+          "type": "Text",
+          "config": {
+            "label": "Header",
+            "placeholder": ""
+          }
+        },
         "text": {
           "type": "StructuredText",
           "config": {
-            "label": "Text",
+            "label": "title",
             "placeholder": "",
             "allowTargetBlank": true,
             "multi": "paragraph,heading1,strong,em"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,embed,rtl"
+          }
+        },
+        "buttonText": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
           }
         },
         "buttonLink": {
@@ -26,13 +49,6 @@
             "label": "Button Link",
             "placeholder": "",
             "select": null
-          }
-        },
-        "buttonText": {
-          "type": "Text",
-          "config": {
-            "label": "Button Text",
-            "placeholder": ""
           }
         },
         "backgroundImage": {
