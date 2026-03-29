@@ -47,65 +47,7 @@ const Whysection: FC<WhysectionProps> = ({ slice }) => {
               </div>
             </div>
           ))}
-          <div className="flex gap-[1.2rem] items-start">
-            <div className="text-[2.5rem] text-[rgba(45,92,62,0.15)] shrink-0 leading-1 font-(--font-display) ">
-              01
-            </div>
-            <div>
-              <h3 className="text-[1.05rem] font-bold text-(--clr-deep) mb-[0.4rem]">
-                Professional-Grade Results
-              </h3>
-              <p className="text-[0.92rem] text-(--clr-muted) leading-[1.6]">
-                We use industry-leading hot water extraction equipment that
-                removes deep-set dirt domestic machines simply can&apos;t reach.
-                The difference is visible.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-[1.2rem] items-start">
-            <div className="text-[2.5rem] text-[rgba(45,92,62,0.15)] shrink-0 leading-1 font-(--font-display)">
-              02
-            </div>
-            <div>
-              <h3 className="text-[1.05rem] font-bold text-(--clr-deep) mb-[0.4rem]">
-                Trusted Across Leeds
-              </h3>
-              <p className="text-[0.92rem] text-(--clr-muted) leading-[1.6]">
-                Our reputation is built on word-of-mouth recommendations.
-                We&apos;ve earned the trust of homeowners and businesses across
-                Leeds and West Yorkshire.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-[1.2rem] items-start">
-            <div className="text-[2.5rem] text-[rgba(45,92,62,0.15)] shrink-0 leading-1 font-(--font-display)">
-              03
-            </div>
-            <div>
-              <h3 className="text-[1.05rem] font-bold text-(--clr-deep) mb-[0.4rem]">
-                Honest, Upfront Pricing
-              </h3>
-              <p className="text-[0.92rem] text-(--clr-muted) leading-[1.6]">
-                No hidden fees, no pushy upsells. We&apos;ll give you a clear
-                quote before we start and stick to it. Quality cleaning
-                shouldn&apos;t come with surprise costs.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-[1.2rem] items-start">
-            <div className="text-[2.5rem] text-[rgba(45,92,62,0.15)] shrink-0 leading-1 font-(--font-display)">
-              04
-            </div>
-            <div>
-              <h3 className="text-[1.05rem] font-bold text-(--clr-deep) mb-[0.4rem]">
-                Fully Insured & Reliable
-              </h3>
-              <p className="text-[0.92rem] text-(--clr-muted) leading-[1.6]">
-                We&apos;re fully insured for your peace of mind and we always
-                turn up on time. Dependable service from start to finish.
-              </p>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>
