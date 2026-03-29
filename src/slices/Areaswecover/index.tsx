@@ -23,7 +23,7 @@ const Areaswecover: FC<AreaswecoverProps> = ({ slice }) => {
 
         <div className="flex flex-wrap gap-3 mt-8">
           {slice.primary.areas.map((item,index) => (
-              <span key={index} className="bg-white px-[0.6rem] py-[1.2rem] rounded-[100px] text-[0.9rem] font-medium text-(clr-text) border border-[rgb(255,255,255,0.7)]">Leeds City Centre</span>
+              <span key={index} className="bg-white px-[0.6rem] py-[1.2rem] rounded-[100px] text-[0.9rem] font-medium text-(clr-text) border border-[rgb(255,255,255,0.7)]">{item.text}</span>
           ))}
         </div>
     </div>
