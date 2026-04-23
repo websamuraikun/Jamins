@@ -118,7 +118,7 @@ async function Footer() {
             </a>
           )}{" "}
           &nbsp;·&nbsp;{" "}
-          <a href="mailto:hello@jamins.co.uk">hello@jamins.co.uk</a>
+          <a href={`mailto:${footer.data.email}`}>{footer.data.email}</a>
         </p>
     </footer>
   );
